@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Repository\IProductRepository;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
 
 class ProductController extends Controller
 {
@@ -64,23 +65,28 @@ class ProductController extends Controller
 
     public function update(Request $request, $id)
     {
-        // validate and store data
         $request->validate([
-            'picture' => 'required',
             'title' => 'required',
-            'price' => 'required',
+            'price' => 'required|numeric',
             'description' => 'required'
         ]);
 
-        //image upload
-        $data = $request->all();
-        if($image = $request->file('picture')) {
-            $name = time(). '.' .$image->getClientOriginalName();
-            $image->move(public_path('images'), $name);
-            $data['picture'] = "$name";
+        $product = Product::findOrFail($id);
+
+        $product->title = $request->input('title');
+        $product->price = $request->input('price');
+        $product->description = $request->input('description');
+
+        if ($request->hasFile('picture')) {
+            $image = $request->file('picture');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $path = public_path('images/' . $filename);
+            Image::make($image->getRealPath())->resize(300, 300)->save($path);
+            $product->picture = 'images/' . $filename;
         }
 
-        $this->product->updateProduct($id, $data);
-        return redirect('/products');
+        $product->save();
+
+        return redirect()->route('product.index')->with('success', 'Product updated successfully.');
     }
 }

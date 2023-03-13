@@ -8,7 +8,8 @@
     <hr>
 
     <form action="{{ route('product.update', $product->id) }}" enctype="multipart/form-data" method="POST">
-        @csrf
+      @csrf
+      @method('PUT')
 
         <div class="mb-3">
             <label for="picture" class="form-label">Choose Picture</label>
