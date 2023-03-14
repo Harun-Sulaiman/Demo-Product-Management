@@ -24,7 +24,7 @@
                 <img src="/images/{{ $product->picture }}" height="450px" alt="...">
                 <div class="container m-2 p-2">
                   <h2>{{ $product->title }}</h2>
-                  <h3>Price: ${{ $product->price }}</h3>
+                  <h3>Price: RM {{ $product->price }}</h3>
                   <hr>
                   <p>{{ $product->description }}</p>
                   <a href="{{ route('product.index') }}" class="btn btn-success">Go Home</a>
