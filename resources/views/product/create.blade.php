@@ -6,6 +6,15 @@
 
     <h2>Create Product</h2>
     <hr>
+    
+    <div class="container">
+      <div class="d-flex justify-content-center align-items-center">
+        <div style="width: 18rem; max-width: 30%;">
+          <a href="{{ route('admin.products') }}" class="btn btn-primary">Go Back To Products List</a>
+        </div>
+      </div>
+    </div>
+    <br>
 
     <form action="{{ route('product.store') }}" enctype="multipart/form-data" method="POST">
         @csrf

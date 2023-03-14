@@ -5,6 +5,15 @@
 <h1 class="text-center">Admin All Table Products</h1>
 <br>
 
+<div class="container">
+    <div class="d-flex justify-content-center align-items-center">
+      <div style="width: 18rem; max-width: 50%;">
+        <a href="{{ route('product.index') }}" class="btn btn-success mr-22">Go Home</a>
+        <a href="{{ route('product.create') }}" class="btn btn-primary">Add New Product</a>
+      </div>
+    </div>
+</div>
+<br>
 
 <div class="container">
     <div class="row">

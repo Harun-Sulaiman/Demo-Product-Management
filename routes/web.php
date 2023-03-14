@@ -27,6 +27,7 @@ Route::get('/products/edit/{id}', [ProductController::class, 'edit'])->name('pro
 Route::put('/products/update/{id}', [ProductController::class, 'update'])->name('product.update');
 
 
+
 //admin
 Route::get('/admin/products', [AdminController::class, 'adminGetAllProducts'])->name('admin.products');
 Route::delete('/admin/products/{id}', [AdminController::class, 'adminDeleteProduct'])->name('admin.product.delete');
