@@ -69,7 +69,7 @@
       <div class="row">
         <div class="col-lg-12 text-right">
           <div class="logo_container ">
-            <a href="#"><img src="assets/images/fm-blue.png" alt="Logo" height="30" width="auto"></a>
+            <a href="#"><img src="assets/images/logo.png" alt="Logo" height="30" width="auto"></a>
           </div>
           <nav class="navbar">
             <ul class="navbar_menu">
@@ -145,7 +145,7 @@
   </div>
 </div>
 <!-- Slider -->
-<div class="main_slider" style="background-image:url(assets/images/banner_12.PNG)">
+<div class="main_slider" style="background-image:url(assets/images/banner_12.png)">
   <div class="container fill_height">
     <div class="row align-items-center fill_height">
       <div class="col">
@@ -163,7 +163,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4">
-        <div class="banner_item align-items-center" style="background-image:url(assets/images/banner_1.JPG)">
+        <div class="banner_item align-items-center" style="background-image:url(assets/images/banner_1.jpg)">
           <div class="banner_category">
             <a href="#">Devices</a>
           </div>
