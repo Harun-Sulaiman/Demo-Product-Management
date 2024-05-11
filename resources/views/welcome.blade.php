@@ -69,7 +69,7 @@
       <div class="row">
         <div class="col-lg-12 text-right">
           <div class="logo_container ">
-            <a href="#"><img src="assets/images/logo.png" alt="Logo" height="30" width="auto"></a>
+            <a href="#"><img src="assets/images/logo.png" alt="Logo" height="auto" width="auto"></a>
           </div>
           <nav class="navbar">
             <ul class="navbar_menu">
